@@ -1,3 +1,4 @@
+<!--markdownlint-disable MD041-->
 ## SanDisk Dashboard
 
 SanDisk Dashboard (formerly Western Digital Dashboard) features the ability to:
@@ -10,7 +11,7 @@ SanDisk Dashboard (formerly Western Digital Dashboard) features the ability to:
 
 ## Package Parameters
 
-* `/language:UI_STRING_OR_LANGUAGE_TAG` - Overrides the default language configuration.
+- `/Language:UI_STRING_OR_LANGUAGE_TAG` - Overrides the default language configuration.
 
     Supported languages include:
 
@@ -34,23 +35,24 @@ SanDisk Dashboard (formerly Western Digital Dashboard) features the ability to:
     |简体中文|zh-CN|Simplified Chinese|
     |繁體中文|zh-TW|Traditional Chinese|
 
-* `/Start` - Automatically start Dashboard after the installation completes.
+- `/Start` - Automatically start Dashboard after the installation completes.
+
 ### Examples
 
 ```shell
-choco install sandisk-dashboard --params="'/language:Español'"
+choco install sandisk-dashboard --params="'/Language:Español'"
 ```
 
 ```shell
-choco install sandisk-dashboard --params="'/language:fr-FR'"
+choco install sandisk-dashboard --params="'/Language:fr-FR'"
 ```
 
 ```shell
-choco install sandisk-dashboard --params="'/start'"
+choco install sandisk-dashboard --params="'/Start'"
 ```
 
 ```shell
-choco install sandisk-dashboard --params="'/language:Deutsch /start'"
+choco install sandisk-dashboard --params="'/Language:Deutsch /Start'"
 ```
 
 ## [Package Notes](https://github.com/brogers5/chocolatey-package-sandisk-dashboard/blob/v4.3.2.4/PACKAGE-NOTES.md)
