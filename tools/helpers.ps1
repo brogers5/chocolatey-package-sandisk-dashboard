@@ -78,7 +78,7 @@ function Uninstall-CurrentVersion {
         packageName    = $env:ChocolateyPackageName
         softwareName   = 'Dashboard'
         fileType       = 'EXE'
-        silentArgs     = '-uninstall'
+        silentArgs     = '-uninstall -silent'
         validExitCodes = @(0)
     }
 
@@ -101,24 +101,6 @@ function Uninstall-CurrentVersion {
         $packageArgs['file'] = $filePath
 
         Stop-Process -InputObject $tempProcess -Force
-        
-        $installedVersion = Get-CurrentVersion
-        if ([Version] $installedVersion -lt [Version] '3.7.2.4') {
-            #Dashboard did not support a silent (un)install for this version.
-            #Script an unattended uninstall with AutoHotkey.
-            $ahkVersion = (Get-Command -Name 'AutoHotKey.exe' -CommandType Application).Version
-            if ($ahkVersion -lt '2.0.0') {
-                $ahkScriptPath = Join-Path -Path $toolsDir -ChildPath 'uninstall_v1.ahk'
-            }
-            else {
-                $ahkScriptPath = Join-Path -Path $toolsDir -ChildPath 'uninstall_v2.ahk'
-            }
-
-            Start-Process -FilePath 'AutoHotKey.exe' -ArgumentList $ahkScriptPath
-        }
-        else {
-            $packageArgs['silentArgs'] += ' -silent'
-        }
 
         Uninstall-ChocolateyPackage @packageArgs
 
