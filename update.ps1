@@ -3,7 +3,7 @@ param([switch] $Force)
 Import-Module au
 
 $currentPath = (Split-Path $MyInvocation.MyCommand.Definition)
-$userAgent = 'Update checker of Chocolatey Community Package ''wd-dashboard'''
+$userAgent = 'Update checker of Chocolatey Community Package ''sandisk-dashboard'''
 
 function Set-DocumentVersion($RelativeFilePath) {
     $fileContents = Get-Content -Path $RelativeFilePath -Encoding UTF8
@@ -29,7 +29,7 @@ function global:au_BeforeUpdate ($Package) {
         "$currentETagValue" | Out-File -FilePath $etagFilePath -Encoding UTF8
     }
 
-    #Archive this version for future development, since Western Digital only keeps the latest version available
+    #Archive this version for future development, since SanDisk only keeps the latest version available
     $filePath = ".\DashboardSetupSA_$($Latest.Version).exe"
     Invoke-WebRequest -Uri $Latest.Url32 -OutFile $filePath -UserAgent $userAgent
     
@@ -59,18 +59,18 @@ function global:au_SearchReplace {
         }
         "$($Latest.PackageName).nuspec" = @{
             '(<packageSourceUrl>)[^<]*(</packageSourceUrl>)' = "`$1https://github.com/brogers5/chocolatey-package-$($Latest.PackageName)/tree/v$($Latest.Version)`$2"
-            '(<copyright>)[^<]*(</copyright>)'               = "`$1(c) $($(Get-Date -Format yyyy)) Western Digital Corporation`$2"
+            '(<copyright>)[^<]*(</copyright>)'               = "`$1(c) $($(Get-Date -Format yyyy)) SanDisk Corporation`$2"
         }
     }
 }
 
 function global:au_GetLatest {
-    $uri = 'https://support-en.wd.com/app/answers/detailweb/a_id/31759/related/1'
+    $uri = 'https://support-en.sandisk.com/app/answers/detailweb/a_id/31759'
 
     $page = Invoke-WebRequest -Uri $uri -UseBasicParsing -UserAgent $userAgent
     $url = $page.Links | Where-Object href -Match 'DashboardSetupSA.exe' | Select-Object -First 1 -ExpandProperty href
 
-    $updateUri = 'https://wddashboarddownloads.wdc.com/wdDashboard/config/lista_updater.xml'
+    $updateUri = 'https://sddashboarddownloads.sandisk.com/wdDashboard/config/lista_updater.xml'
     $xmlDocument = Invoke-RestMethod -Uri $updateUri -UseBasicParsing -UserAgent $userAgent
 
     $version = $xmlDocument.lista.Application_Installer.version

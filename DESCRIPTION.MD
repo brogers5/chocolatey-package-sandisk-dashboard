@@ -1,10 +1,12 @@
-## Western Digital Dashboard
+## SanDisk Dashboard
 
-The Western Digital Dashboard helps users maintain peak performance of Western Digital drives in Windows® operating systems with a user-friendly graphical interface. The Western Digital Dashboard includes tools for analysis of the disk (including the disk model, capacity, firmware version, and SMART attributes) and firmware updates.
+SanDisk Dashboard (formerly Western Digital Dashboard) features the ability to:
 
-Enhance your gaming station with fully customizable RGB lighting on supported WD_BLACK products, designed to match your style with various colors and thirteen different LED pattern effects to choose from. Or, seamlessly integrate with your existing ASUS Aura Sync on Armoury Crate, GIGABYTE RGB Fusion 2.0, MSI Mystic Light, or Razer Chroma™ RGB ecosystem.
+- Maintain peak performance of the SanDisk and Western Digital solid state drives (SSD) in Windows® operating systems
+- Analyze drives (including the disk model, capacity, firmware version, drive health and SMART attributes)
+- Update drive firmware
 
-![Dashboard Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-wd-dashboard@549dc3ff1dd1bae64a9e5e5bd81d49816f2a46b5/Screenshot.png)
+![SanDisk Dashboard Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-sandisk-dashboard@ef302252ab8abcde52dfb74721cca2da24a9c42f/Screenshot.png)
 
 ## Package Parameters
 
@@ -32,24 +34,23 @@ Enhance your gaming station with fully customizable RGB lighting on supported WD
     |简体中文|zh-CN|Simplified Chinese|
     |繁體中文|zh-TW|Traditional Chinese|
 
-* `/start` - Automatically start Dashboard after the installation completes.
-
+* `/Start` - Automatically start Dashboard after the installation completes.
 ### Examples
 
 ```shell
-choco install wd-dashboard --params="'/language:Español'"
+choco install sandisk-dashboard --params="'/language:Español'"
 ```
 
 ```shell
-choco install wd-dashboard --params="'/language:fr-FR'"
+choco install sandisk-dashboard --params="'/language:fr-FR'"
 ```
 
 ```shell
-choco install wd-dashboard --params="'/start'"
+choco install sandisk-dashboard --params="'/start'"
 ```
 
 ```shell
-choco install wd-dashboard --params="'/language:Deutsch /start'"
+choco install sandisk-dashboard --params="'/language:Deutsch /start'"
 ```
 
-## [Package Notes](https://github.com/brogers5/chocolatey-package-wd-dashboard/blob/v4.3.2.4/PACKAGE-NOTES.md)
+## [Package Notes](https://github.com/brogers5/chocolatey-package-sandisk-dashboard/blob/v4.3.2.4/PACKAGE-NOTES.md)
