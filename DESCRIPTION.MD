@@ -55,4 +55,4 @@ choco install sandisk-dashboard --params="'/Start'"
 choco install sandisk-dashboard --params="'/Language:Deutsch /Start'"
 ```
 
-## [Package Notes](https://github.com/brogers5/chocolatey-package-sandisk-dashboard/blob/v4.3.2.4/PACKAGE-NOTES.md)
+## [Package Notes](https://github.com/brogers5/chocolatey-package-sandisk-dashboard/blob/v5.0.2.3/PACKAGE-NOTES.md)

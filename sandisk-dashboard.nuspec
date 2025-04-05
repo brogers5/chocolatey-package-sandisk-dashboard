@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sandisk-dashboard</id>
-    <version>4.3.2.4</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-sandisk-dashboard/tree/v4.3.2.4</packageSourceUrl>
+    <version>5.0.2.3</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-sandisk-dashboard/tree/v5.0.2.3</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>SanDisk Dashboard</title>
     <authors>SanDisk Corporation</authors>
@@ -14,17 +14,19 @@
     <mailingListUrl>https://forums.sandisk.com/c/applications/sandisk-ssd-dashboard/191</mailingListUrl>
     <tags>sandisk dashboard hdd ssd dock nvme pcie usb thunderbolt trim firmware smart rgb freeware</tags>
     <summary>Management software for flash storage disks, memory cards, and docks owned by SanDisk.</summary>
-    <description><![CDATA[## Western Digital Dashboard
+    <description><![CDATA[## SanDisk Dashboard
 
-The Western Digital Dashboard helps users maintain peak performance of Western Digital drives in Windows® operating systems with a user-friendly graphical interface. The Western Digital Dashboard includes tools for analysis of the disk (including the disk model, capacity, firmware version, and SMART attributes) and firmware updates.
+SanDisk Dashboard (formerly Western Digital Dashboard) features the ability to:
 
-Enhance your gaming station with fully customizable RGB lighting on supported WD_BLACK products, designed to match your style with various colors and thirteen different LED pattern effects to choose from. Or, seamlessly integrate with your existing ASUS Aura Sync on Armoury Crate, GIGABYTE RGB Fusion 2.0, MSI Mystic Light, or Razer Chroma™ RGB ecosystem.
+- Maintain peak performance of the SanDisk and Western Digital solid state drives (SSD) in Windows® operating systems
+- Analyze drives (including the disk model, capacity, firmware version, drive health and SMART attributes)
+- Update drive firmware
 
-![Dashboard Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-wd-dashboard@549dc3ff1dd1bae64a9e5e5bd81d49816f2a46b5/Screenshot.png)
+![SanDisk Dashboard Screenshot](https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-sandisk-dashboard@ef302252ab8abcde52dfb74721cca2da24a9c42f/Screenshot.png)
 
 ## Package Parameters
 
-* `/language:UI_STRING_OR_LANGUAGE_TAG` - Overrides the default language configuration.
+- `/Language:UI_STRING_OR_LANGUAGE_TAG` - Overrides the default language configuration.
 
     Supported languages include:
 
@@ -48,28 +50,28 @@ Enhance your gaming station with fully customizable RGB lighting on supported WD
     |简体中文|zh-CN|Simplified Chinese|
     |繁體中文|zh-TW|Traditional Chinese|
 
-* `/start` - Automatically start Dashboard after the installation completes.
+- `/Start` - Automatically start Dashboard after the installation completes.
 
 ### Examples
 
 ```shell
-choco install wd-dashboard --params="'/language:Español'"
+choco install sandisk-dashboard --params="'/Language:Español'"
 ```
 
 ```shell
-choco install wd-dashboard --params="'/language:fr-FR'"
+choco install sandisk-dashboard --params="'/Language:fr-FR'"
 ```
 
 ```shell
-choco install wd-dashboard --params="'/start'"
+choco install sandisk-dashboard --params="'/Start'"
 ```
 
 ```shell
-choco install wd-dashboard --params="'/language:Deutsch /start'"
+choco install sandisk-dashboard --params="'/Language:Deutsch /Start'"
 ```
 
-## [Package Notes](https://github.com/brogers5/chocolatey-package-wd-dashboard/blob/v4.3.2.4/PACKAGE-NOTES.md)
-]]>    </description>
+## [Package Notes](https://github.com/brogers5/chocolatey-package-sandisk-dashboard/blob/v5.0.2.3/PACKAGE-NOTES.md)
+]]></description>
     <releaseNotes>https://sddashboarddownloads.sandisk.com/wdDashboard/SanDiskDashboardReleaseNotes.pdf</releaseNotes>
     <dependencies>
       <dependency id="vcredist140" version="14.28.29325.2" />
