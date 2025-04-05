@@ -46,7 +46,7 @@ function global:au_BeforeUpdate ($Package) {
 
     $descriptionRelativePath = '.\DESCRIPTION.md'
     Set-DocumentVersion -RelativeFilePath $descriptionRelativePath
-    Set-DescriptionFromReadme -Package $Package -ReadmePath $descriptionRelativePath
+    Set-DescriptionFromReadme -Package $Package -ReadmePath $descriptionRelativePath -SkipFirst 1
 }
 
 function global:au_SearchReplace {
